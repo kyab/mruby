@@ -293,7 +293,7 @@ mrb_write_section_irep(mrb_state *mrb, size_t start_index, uint8_t *bin)
     section_size += rlen;
   }
 
-  mrb_write_section_irep_header(mrb, section_size, mrb->irep_len - start_index, start_index, bin);
+  mrb_write_section_irep_header(mrb, section_size, mrb->irep_len - start_index, 0, bin);
 
   return MRB_DUMP_OK;
 }
